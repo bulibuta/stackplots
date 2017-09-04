@@ -18,7 +18,7 @@ function stackplots(fig,m,n,varargin)
 %	fig -- figure with mxn subplots
 %   m -- number of rows
 %   n -- number of columns
-% OPTIONAL:
+% PARAMETERS (key-value pairs):
 %   xlabel -- global x axis label
 %   ylabel -- global y axis label
 
