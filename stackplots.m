@@ -71,9 +71,10 @@ for i = 0:m-1
     end
 end
 
-% Set new subplot positions
+% Walk all subplots
 for i = 1:length(splot)
-    set(splot(i),'position',pos{i});
+    set(splot(i),'position',pos{i}); % Set new subplot positions
+    set(splot(i),'TickLabelInterpreter','latex'); % LaTex interp
 end
 
 %% Avoid overlapping
@@ -122,11 +123,13 @@ if ~isempty(args.xlabel) || ~isempty(args.ylabel)
 end
 if args.ylabel
     text(.08,.45,args.ylabel,...
+    'Interpreter', 'latex',...
     'VerticalAlignment','bottom',...
     'HorizontalAlignment','left', 'Rotation', 90, 'FontSize',12)
 end
 if args.xlabel
     text(.45,0,args.xlabel,...
+    'Interpreter', 'latex',...
     'VerticalAlignment','bottom',...
     'HorizontalAlignment','center', 'FontSize',12)
 end
